@@ -1,0 +1,37 @@
+//Open memory card file == FILE * fopen(filename, "r");
+fopen
+//Look for beginning of JPEG == JPEG start with distant header
+// - First three Bytes: 0xff 0xd8 0xff
+// - Last Byte: 0xe0, 0xe1, 0xe2, ..., 0xef
+// - JPEGs stored back to back in memory card
+// - Each block 512 byte blocks
+//Open new JPEG
+//Write 512 bytes until new JPEG is found
+//Stop at the end of file
+
+
+
+//Read Files
+// function: fread(data, seize, number, inptr);
+//data: pointer to where to store data you're reading
+//size: size of each element to read
+//number: numberof elements to read
+//inptr: FILE * to read from (in (512byte chunks))
+//to check if start of a new JPEC file check the first byte -buffer[0] == 0xff
+// 2nd byte -buffer[1] == 0xd8. 3rd buffer[2] == 0xff
+
+
+
+
+//Open memory
+//Repeat until end of card:
+    //Read 512 bytes into a buffer
+    //If start of new JPEG
+        //If first JPEG
+            ...
+        Else
+            ...
+    Else
+        If already found JPEG
+            ...
+Close remaining files
